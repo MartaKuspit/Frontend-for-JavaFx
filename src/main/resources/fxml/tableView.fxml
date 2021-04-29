@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.TableViewController">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Pane fx:id="tableViewPane" prefHeight="900.0" prefWidth="1200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <children>
+                <Button fx:id="addingButton" layoutX="600.0" layoutY="93.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="129.0" text="Dodaj autora" />
+                <Button fx:id="deletingButton" layoutX="600.0" layoutY="239.0" mnemonicParsing="false" text="Usuń" />
+                <Button fx:id="editButton" layoutX="600.0" layoutY="188.0" mnemonicParsing="false" text="Edytuj dane autora" />
+                <Button fx:id="refreshButton" layoutX="331.0" layoutY="39.0" mnemonicParsing="false" text="Odśwież" />
+                <Button fx:id="addingFilm" layoutX="600.0" layoutY="139.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="159.0" text="Dodaj film do autora" />
+                <TableView fx:id="autorTable" layoutX="16.0" layoutY="93.0" prefHeight="240.0" prefWidth="565.0">
+                    <columns>
+                        <TableColumn fx:id="idAutor" prefWidth="96.0" text="id Klienta" />
+                        <TableColumn fx:id="firstName" prefWidth="178.0" text="Imię" />
+                        <TableColumn fx:id="lastName" prefWidth="290.0" text="Nazwisko" />
+                    </columns>
+                </TableView>
+                <TableView fx:id="movieTable" layoutX="16.0" layoutY="372.0" prefHeight="240.0" prefWidth="663.0">
+                    <columns>
+                        <TableColumn fx:id="title" prefWidth="335.0" text="Tytuł Filmu" />
+                        <TableColumn fx:id="productionYear" prefWidth="174.0" text="Rok produkcji" />
+                        <TableColumn fx:id="duration" prefWidth="153.0" text="Czas trwania" />
+                    </columns>
+                </TableView>
+                <TextField fx:id="textField" layoutX="93.0" layoutY="39.0" />
+                <Label layoutX="22.0" layoutY="44.0" text="Szukaj" />
+            </children>
+        </Pane>
+    </children>
+</GridPane>
